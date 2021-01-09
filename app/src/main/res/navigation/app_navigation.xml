@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/welcomeScreenFragment2">
+
+    <fragment
+        android:id="@+id/welcomeScreenFragment2"
+        android:name="ru.proweb63.soccerquizapp.WelcomeScreenFragment"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen" >
+        <action
+            android:id="@+id/action_welcomeScreenFragment2_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="ru.proweb63.soccerquizapp.QuizFragment"
+        android:label="fragment_quize"
+        tools:layout="@layout/fragment_quize" >
+        <action
+            android:id="@+id/action_quizFragment_to_goalFragment"
+            app:destination="@id/goalFragment"
+            app:popUpTo="@id/quizFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quizFragment_to_missFragment"
+            app:destination="@id/missFragment"
+            app:popUpTo="@id/welcomeScreenFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalFragment"
+        android:name="ru.proweb63.soccerquizapp.GoalFragment"
+        android:label="fragment_goal"
+        tools:layout="@layout/fragment_goal" >
+        <action
+            android:id="@+id/action_goalFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:popUpTo="@id/goalFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/missFragment"
+        android:name="ru.proweb63.soccerquizapp.MissFragment"
+        android:label="fragment_miss"
+        tools:layout="@layout/fragment_miss" >
+        <action
+            android:id="@+id/action_missFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:popUpTo="@id/welcomeScreenFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="ru.proweb63.soccerquizapp.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" />
+    <fragment
+        android:id="@+id/ballFeaturesFragment"
+        android:name="ru.proweb63.soccerquizapp.BallFeaturesFragment"
+        android:label="fragment_ball_features"
+        tools:layout="@layout/fragment_ball_features" />
+</navigation>

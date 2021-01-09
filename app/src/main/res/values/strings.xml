@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Soccer Quiz App</string>
+    <string name="app_title">Soccer Quiz</string>
+    <string name="app_btn_lets_play">Lets play</string>
+    <string name="app_text_question">Question</string>
+    <string name="app_btn_pass">Pass!</string>
+    <string name="app_text_miss">You missed :(</string>
+    <string name="app_btm_one_more_time">One more time?</string>
+    <string name="app_text_goal">Goal!!!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
